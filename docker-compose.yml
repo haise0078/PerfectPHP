@@ -12,7 +12,9 @@ services:
       - php
     
   php:
-    build: ./php
+    build: 
+        context: ./php
+        dockerfile: Dockerfile
     volumes:
       - ./www/html:/var/www/html
       - ./www/mini-blog.localhost:/var/www/mini-blog.localhost

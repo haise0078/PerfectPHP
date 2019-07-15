@@ -9,11 +9,11 @@ class Router{
     public function compileRoutes($definitions){
         $routes = array();
 
-        foreach($definitons as $url => $params){
+        foreach($definitions as $url => $params){
             $tokens = explode('/',ltrim($url , '/'));
             foreach( $tokens as $i => $params){
-                if( 0 === strpos($token, ':')){
-                    $name = substr($token, ':');
+                if( 0 === strpos($tokens, ':')){
+                    $name = substr($tokens, ':');
                     $token = '(?P<' . $name . '>[＾/]+)';
                 }
                 $tokens[$i] = $token;
