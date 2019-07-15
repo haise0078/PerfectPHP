@@ -1,0 +1,1 @@
+class UnauthorizedActionException extends Exception{};
