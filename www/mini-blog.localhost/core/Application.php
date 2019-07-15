@@ -26,10 +26,10 @@ abstract class Application{
 
     protected function initialize(){
         $this->request = new Request();
-        $this->request = new Response();
+        $this->response = new Response();
         $this->session = new Session();
         $this->db_manager = new DbManager();
-        $this->router = new Router($this->registerRouter());
+        $this->router = new Router($this->registerRoutes());
     }
 
     protected function configure(){
